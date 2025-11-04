@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - RefurbE Mart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Additional styles for tabs and forms */
+        .tabs-container {
+            margin: 20px auto;
+            max-width: 1080px;
+            padding: 0 25px;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #f1f1f1;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .tab.active {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+            margin-bottom: -1px;
+            font-weight: bold;
+            color: #ff523b;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .sell-form, .orders-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input, 
+        .form-group textarea, 
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .upload-area {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        
+        .upload-area:hover {
+            border-color: #ff523b;
+        }
+        
+        .order-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .order-info {
+            flex: 2;
+        }
+        
+        .order-status {
+            flex: 1;
+            text-align: right;
+            font-weight: 500;
+        }
+        
+        .status-delivered {
+            color: green;
+        }
+        
+        .status-processing {
+            color: orange;
+        }
+        
+        .status-shipped {
+            color: blue;
+        }
+        
+        .no-orders, .no-items {
+            text-align: center;
+            padding: 40px;
+            color: #777;
+        }
+        
+        .order-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .order-details {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/WEB-STICK-LOGO.png" width="75px" alt="RefurbE Mart Logo">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html">
+                <img src="images/cart-logo.png" width="30px" height="30px" alt="Cart Logo">
+            </a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu Icon">
+        </div>
+    </div>
+
+    <!-- Tabs Container -->
+    <div class="tabs-container">
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('cart')">Cart</div>
+            <div class="tab" onclick="switchTab('sell')">Sell</div>
+            <div class="tab" onclick="switchTab('orders')">Orders</div>
+        </div>
+        
+        <!-- Cart Tab Content -->
+        <div id="cart-tab" class="tab-content active">
+            <!-------- cart items details ----------->
+            <div class="small-container cart-page">
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="images/gallery-1.jpg" alt="">
+                                <div>
+                                    <p>Refurbished Ball Mouse</p>
+                                    <small>Price: ₱500.00</small>
+                                    <br>
+                                    <a href="">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="2"></td>
+                        <td>₱1000.00</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="images/product-1.jpg" alt="">
+                                <div>
+                                    <p>Xiaomi Redmi Note 13</p>
+                                    <small>Price: ₱2000.00</small>
+                                    <br>
+                                    <a href="">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"></td>
+                        <td>₱2000.00</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="images/product-4.jpg" alt="">
+                                <div>
+                                    <p>Nokia N95 with Dual Sliding</p>
+                                    <small>Price: ₱2800.00</small>
+                                    <br>
+                                    <a href="">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"></td>
+                        <td>₱2800.00</td>
+                    </tr>
+                </table>
+                <div class="total-price">
+                    <table>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>₱3,280.00</td>
+                        </tr>
+                        <tr>
+                            <td>Shipping</td>
+                            <td>₱50.00</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>₱3,330.00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="order-btn">
+                    <button type="submit" class="btn" onclick="openModal()">Order</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sell Tab Content -->
+        <div id="sell-tab" class="tab-content">
+            <div class="sell-form">
+                <h2>Sell Your Refurbished Electronics</h2>
+                <p>Fill out the form below to list your refurbished electronic item for sale.</p>
+                
+                <form id="sellItemForm">
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" id="productName" name="productName" required placeholder="e.g., iPhone 12 Pro Max">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productCategory">Category</label>
+                        <select id="productCategory" name="productCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="smartphone">Smartphone</option>
+                            <option value="laptop">Laptop</option>
+                            <option value="tablet">Tablet</option>
+                            <option value="camera">Camera</option>
+                            <option value="accessory">Accessory</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productCondition">Condition</label>
+                        <select id="productCondition" name="productCondition" required>
+                            <option value="">Select Condition</option>
+                            <option value="excellent">Excellent - Like New</option>
+                            <option value="good">Good - Minor Signs of Use</option>
+                            <option value="fair">Fair - Visible Signs of Use</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productDescription">Description</label>
+                        <textarea id="productDescription" name="productDescription" required placeholder="Describe your product in detail including any specifications, features, and refurbishment details"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productPrice">Price (₱)</label>
+                        <input type="number" id="productPrice" name="productPrice" min="1" step="0.01" required placeholder="e.g., 5000.00">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Upload Photos (Max 4 images)</label>
+                        <div class="upload-area" onclick="document.getElementById('productImages').click()">
+                            <i class="fa fa-cloud-upload" style="font-size: 40px; color: #ccc;"></i>
+                            <p>Click to upload product images</p>
+                            <input type="file" id="productImages" name="productImages" accept="image/*" multiple style="display: none;" onchange="handleImageUpload()">
+                        </div>
+                        <div id="image-preview"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn">List Item for Sale</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Orders Tab Content -->
+        <div id="orders-tab" class="tab-content">
+            <div class="orders-container">
+                <h2>Your Orders</h2>
+                <p>Track your purchase history and order status.</p>
+                
+                <div class="order-filters">
+                    <button class="btn filter-btn active" onclick="filterOrders('all')">All Orders</button>
+                    <button class="btn filter-btn" onclick="filterOrders('processing')">Processing</button>
+                    <button class="btn filter-btn" onclick="filterOrders('shipped')">Shipped</button>
+                    <button class="btn filter-btn" onclick="filterOrders('delivered')">Delivered</button>
+                </div>
+                
+                <div id="orders-list">
+                    <!-- Order items will be dynamically populated -->
+                    <div class="order-item">
+                        <div class="order-details">
+                            <img src="images/product-1.jpg" alt="Xiaomi Redmi Note 13" class="order-image">
+                            <div class="order-info">
+                                <h3>Xiaomi Redmi Note 13</h3>
+                                <p>Order #: RM123456</p>
+                                <p>Order Date: April 15, 2025</p>
+                                <p>Quantity: 1</p>
+                                <p>Total: ₱2,050.00</p>
+                            </div>
+                        </div>
+                        <div class="order-status status-delivered">Delivered</div>
+                    </div>
+                    
+                    <div class="order-item">
+                        <div class="order-details">
+                            <img src="images/product-4.jpg" alt="Nokia N95" class="order-image">
+                            <div class="order-info">
+                                <h3>Nokia N95 with Dual Sliding</h3>
+                                <p>Order #: RM654321</p>
+                                <p>Order Date: April 10, 2025</p>
+                                <p>Quantity: 1</p>
+                                <p>Total: ₱2,850.00</p>
+                            </div>
+                        </div>
+                        <div class="order-status status-shipped">Shipped</div>
+                    </div>
+                    
+                    <div class="order-item">
+                        <div class="order-details">
+                            <img src="images/gallery-1.jpg" alt="Ball Mouse" class="order-image">
+                            <div class="order-info">
+                                <h3>Refurbished Ball Mouse</h3>
+                                <p>Order #: RM789012</p>
+                                <p>Order Date: April 5, 2025</p>
+                                <p>Quantity: 2</p>
+                                <p>Total: ₱1,050.00</p>
+                            </div>
+                        </div>
+                        <div class="order-status status-processing">Processing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Choose Payment Method</h2>
+
+            <div class="payment-options">
+                <!-- COD -->
+                <h3>Cash on Delivery</h3>
+                <button class="btn cod" onclick="payCOD()">Pay on Delivery</button>
+
+                <!-- Online -->
+                <h3>Online Payment</h3>
+                <div class="online-payments">
+                    <button class="logo-btn" onclick="payOnline('GCash')">
+                        <img src="images/logo-gcash.png" alt="Gcash Logo">
+                    </button>
+                    <button class="logo-btn" onclick="payOnline('Visa/Mastercard')">
+                        <img src="images/logo-mastercard.png" alt="Mastercard Logo">
+                    </button>
+                    <button class="logo-btn" onclick="payOnline('PayPal')">
+                        <img src="images/logo-paypal.png" alt="Paypal Logo">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="images/logo-gcash.png" alt="Gcash Logo">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-mastercard.png" alt="Mastercard Logo">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-paypal.png" alt="Paypal Logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------- Footer ----------->
+    <div class="footer">
+        <p class="copyright">Copyright 2025 - RefurbE Mart</p>
+    </div>
+
+    <script>
+        // Toggle menu function
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+        // Tab switching functionality
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName + '-tab').classList.add('active');
+            
+            // Add active class to clicked tab
+            event.currentTarget.classList.add('active');
+        }
+
+        // Handle image upload preview
+        function handleImageUpload() {
+            const fileInput = document.getElementById('productImages');
+            const previewContainer = document.getElementById('image-preview');
+            previewContainer.innerHTML = '';
+            
+            if (fileInput.files.length > 4) {
+                alert('Maximum 4 images allowed');
+                fileInput.value = '';
+                return;
+            }
+            
+            Array.from(fileInput.files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.style.width = '100px';
+                    img.style.height = '100px';
+                    img.style.objectFit = 'cover';
+                    img.style.margin = '5px';
+                    previewContainer.appendChild(img);
+                }
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // Form submission for selling items
+        document.getElementById('sellItemForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Your item has been listed for sale successfully! It will be reviewed by our team before going live.');
+            this.reset();
+            document.getElementById('image-preview').innerHTML = '';
+        });
+
+        // Filter orders by status
+        function filterOrders(status) {
+            const orders = document.querySelectorAll('.order-item');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            // Update active filter button
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+            
+            // Show/hide orders based on filter
+            orders.forEach(order => {
+                const orderStatus = order.querySelector('.order-status').classList[1];
+                const statusClass = orderStatus.replace('status-', '');
+                
+                if (status === 'all' || statusClass === status) {
+                    order.style.display = 'flex';
+                } else {
+                    order.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal functions (existing from your code)
+        const modal = document.getElementById("orderModal");
+        const closeBtn = document.querySelector(".close");
+
+        // Open modal (fade in + float in)
+        function openModal() {
+            modal.classList.add("show");
+            modal.classList.remove("closing");
+        }
+
+        // Close modal (fade out + float out)
+        function closeModal() {
+            modal.classList.add("closing");
+            setTimeout(() => {
+                modal.classList.remove("show", "closing");
+            }, 300);
+        }
+
+        // Cash on Delivery
+        function payCOD() {
+            alert("✅ You selected Cash on Delivery.\nYour order will be paid upon delivery.");
+            closeModal();
+        }
+
+        // Online Payment
+        function payOnline(method) {
+            alert("✅ You selected " + method + " for payment.\nRedirecting to " + method + " gateway...");
+            closeModal();
+        }
+
+        closeBtn.addEventListener("click", closeModal);
+
+        window.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Simple JavaScript for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Product rating hover effect
+            const ratings = document.querySelectorAll('.rating');
+            ratings.forEach(rating => {
+                rating.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.1)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                
+                rating.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

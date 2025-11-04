@@ -1,2 +1,1 @@
-# Refurb-e-Mart-OOP
-For Academic Purposes only!
+# RefurbE-Mart-A-Web-Based-Commerce-Platform-for-Refurbished-Electronics

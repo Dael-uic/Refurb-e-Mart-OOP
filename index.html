@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RefurbE Mart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/WEB-STICK-LOGO.png" width="75px" alt="RefurbE Mart Logo">
+                </div>
+                <!-- search bar -->
+                <div class="search-bar">
+                    <form action="products.html" method="GET">
+                        <input type="text" placeholder="Search products..." name="q">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html">
+                    <img src="images/cart-logo.png" width="30px" height="30px" alt="Cart Logo">
+                </a>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu Icon">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Look for affordable<br>refurbished gadgets!</h1>
+                    <p>Get the best deals on refurbished electronics.
+                        <br>Quality products at unbeatable prices.</p>
+                        <a href="products.html" class="btn">Browse Now! &#10147;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/feature-home2.jpg" width="700" alt="Featured Products">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-------- Featured Categories----------->
+<div class="categories">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <img src="images/cat-1.jpg" alt="Smartphones">
+            </div>
+            <div class="col-3">
+                <img src="images/cat-2.jpg" alt="Laptops">
+            </div>
+            <div class="col-3">
+                <img src="images/cat-3.jpg" alt="Tablets">
+            </div>
+        </div>
+    </div>
+</div>
+<!-------- Featured Products----------->
+<div class="small-container">
+    <h2 class="title">Featured Products</h2>
+    <div class="row">
+        
+        <div class="col-4" onclick="window.location.href='product-details.html'" style="cursor: pointer;">
+            <img src="images/product-1.jpg" alt="Xiaomi Redmi Note 13">
+            <h4>Xiaomi Redmi Note 13</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p>₱2000.00</p>
+        </div>
+        <div class="col-4" onclick="window.location.href='product-details.html'" style="cursor: pointer;">
+            <img src="images/product-2.jpg" alt="Samsung Galaxy Folder 2">
+            <h4>Samsung Galaxy Folder 2</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p>₱750.00</p>
+        </div>
+        <div class="col-4" onclick="window.location.href='product-details.html'" style="cursor: pointer;">
+            <img src="images/product-3.jpg" alt="Blackberry Classic">
+            <h4>Blackberry Classic</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p>₱800.00</p>
+        </div>
+        <div class="col-4" onclick="window.location.href='product-details.html'" style="cursor: pointer;">
+            <img src="images/product-4.jpg" alt="Nokia N95 with Dual Sliding">
+            <h4>Nokia N95 with Dual Sliding</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <p>₱2800.00</p>
+        </div>
+    </div>
+    <h2 class="title">Latest Products</h2>
+    <div class="row">
+        <div class="col-4" onclick="window.location.href='product-details.html'" style="cursor: pointer;">
+            <img src="images/product-1.jpg" alt="Xiaomi Redmi Note 13">
+            <h4>Xiaomi Redmi Note 13</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p>₱2000.00</p>
+        </div>
+        <div class="col-4" onclick="window.location.href='product-details.html'" style="cursor: pointer;">
+            <img src="images/product-2.jpg" alt="Samsung Galaxy Folder 2">
+            <h4>Samsung Galaxy Folder 2</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p>₱750.00</p>
+        </div>
+        <div class="col-4" onclick="window.location.href='product-details.html'" style="cursor: pointer;">
+            <img src="images/product-3.jpg" alt="Blackberry Classic">
+            <h4>Blackberry Classic</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p>₱800.00</p>
+        </div>
+        <div class="col-4" onclick="window.location.href='product-details.html'" style="cursor: pointer;">
+            <img src="images/product-4.jpg" alt="Nokia N95 with Dual Sliding">
+            <h4>Nokia N95 with Dual Sliding</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <p>₱2800.00</p>
+        </div>
+    </div>
+</div>
+<!-------- Offer ----------->
+<div class="offer">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/Exclusive_1.jpg" alt="Special Offer">
+            </div>
+            <div class="col-2">
+                <p>Exclusively Available on RefurbE Mart</p>
+                <h1>Smartphone 5G</h1>
+                <small>Get the latest 5G smartphone at an affordable price. 
+                    High performance, excellent camera, and long battery life.
+                </small><br>
+                <a href="product-details.html" class="btn">Buy Now &#10147;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------- Testimonial ----------->
+<div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Lorem ipsum, dolor sit amet consectetur 
+                    adipisicing elit. Neque, soluta quasi doloribus
+                    eveniet facere veritatis!
+                </p>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+                <img src="images/user-1.jpg" alt="">
+                <h3>Kermit The Frog</h3>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Lorem ipsum, dolor sit amet consectetur 
+                    adipisicing elit. Neque, soluta quasi doloribus
+                    eveniet facere veritatis!
+                </p>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <img src="images/user-2.jpg" alt="">
+                <h3>Violet_17</h3>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Lorem ipsum, dolor sit amet consectetur 
+                    adipisicing elit. Neque, soluta quasi doloribus
+                    eveniet facere veritatis!
+                </p>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <img src="images/user-3.jpg" alt="">
+                <h3>Kevin Feildmoore</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------- brands ----------->
+<div class="brands">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-5">
+                <img src="images/logo-gcash.png" alt="Gcash Logo">
+            </div>
+            <div class="col-5">
+                <img src="images/logo-mastercard.png" alt="Mastercard Logo">
+            </div>
+            <div class="col-5">
+                <img src="images/logo-paypal.png" alt="Paypal Logo">
+            </div>
+        </div>
+    </div>
+</div>
+<!-------- Footer ----------->
+<div class="footer">
+        <p class="copyright">Copyright 2025 - RefurbE Mart</p>
+    </div>
+</div>
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+    // Simple JavaScript for interactive elements
+    document.addEventListener('DOMContentLoaded', function() {
+        // Product rating hover effect
+        const ratings = document.querySelectorAll('.rating');
+        ratings.forEach(rating => {
+            rating.addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.1)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            rating.addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    });
+</script>
+</body>
+</html>

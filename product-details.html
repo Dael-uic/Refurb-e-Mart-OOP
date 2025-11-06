@@ -3,231 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products - RefurbE Mart</title>
+    <title>Product Details - RefurbE Mart</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="navbar">
-            <div class="logo">
-                <img src="images/WEB-STICK-LOGO.png" width="75px" alt="RefurbE Mart Logo">
-            </div>
-            <nav>
-                <ul id="MenuItems">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="account.html">Account</a></li>
-                </ul>
-            </nav>
-            <img src="images/cart-logo.png" width="30px" height="30px" alt="Cart Logo">
-            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu Icon">
-        </div>
-    </div>
 
-<!-------- Single Product Details ----------->
-    <div class="small-container single-product">
-        <div class="row">
-            <div class="col-2">
-                <img src="images/gallery-1.jpg" width="100%" id="ProductImg" alt="Product Image">
-                <div class="small-img-row">
-                    <div class="small-img-col">
-                        <img src="images/gallery-1.jpg" width="100%" class="small-img" alt="Small Image 1">
-                    </div>
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/WEB-STICK-LOGO.png" width="75px"></a>
+        </div>
+
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+
+        <a href="cart.html"><img src="images/cart-logo.png" width="30px" height="30px"></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-2">
+            <img id="product-image" src="" width="100%">
+            <div class="product-rating-container">
+                <label>Rate</label>
+                <div id="productRating" class="product-rating" data-rating="3.5">
+                    <i class="fa fa-star-o" data-value="1"></i>
+                    <i class="fa fa-star-o" data-value="2"></i>
+                    <i class="fa fa-star-o" data-value="3"></i>
+                    <i class="fa fa-star-o" data-value="4"></i>
+                    <i class="fa fa-star-o" data-value="5"></i>
                 </div>
-            </div>
-            <div class="col-2">
-                <p>Home / Ball Mouse</p>
-                <h1>Refurbished HP USB Ball Mouse, Models M-U48a and 5184-4713 Revision D</h1>
-                <h4>₱500.00</h4>
-                <a href="cart.html" class="btn">Add To Cart</a>
-                <h3>Product Details <i class="fa fa-indent"></i></h3>
-                <br>
-                <p>Perfect for retro PC builds, office environments, or anyone who prefers the tactile precision of a traditional ball-style mouse.</p>
+                <span id="ratingValue">0/5</span>
             </div>
         </div>
-    </div>
+        <div class="col-2">
+            <h1 id="product-name"></h1>
+            <h4 id="product-price"></h4>
+            <p id="product-condition" style="margin:4px 0; font-weight:500;"></p>
+            <p id="product-seller" style="margin-top:8px; font-weight:500;"></p>
 
-    <div class="testimonial">
-        <div class="small-container">
-            <div class="row">
-                <div class="col-3">
-                    <i class="fa fa-quote-left"></i>
-                    <p>Lorem ipsum, dolor sit amet consectetur 
-                        adipisicing elit. Neque, soluta quasi doloribus
-                        eveniet facere veritatis!
-                    </p>
-                    <div class="rating">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    </div>
-                    <img src="images/user-1.jpg" alt="">
-                    <h3>Kermit The Frog</h3>
-                </div>
-                <div class="col-3">
-                    <i class="fa fa-quote-left"></i>
-                    <p>Lorem ipsum, dolor sit amet consectetur 
-                        adipisicing elit. Neque, soluta quasi doloribus
-                        eveniet facere veritatis!
-                    </p>
-                    <div class="rating">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <img src="images/user-2.jpg" alt="">
-                    <h3>Violet_17</h3>
-                </div>
-                <div class="col-3">
-                    <i class="fa fa-quote-left"></i>
-                    <p>Lorem ipsum, dolor sit amet consectetur 
-                        adipisicing elit. Neque, soluta quasi doloribus
-                        eveniet facere veritatis!
-                    </p>
-                    <div class="rating">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                    </div>
-                    <img src="images/user-3.jpg" alt="">
-                    <h3>Kevin Feildmoore</h3>
-                </div>
-            </div>
+            <button id="addToCartBtn" class="btn">Add to Cart</button>
+
+            <h3>Product Description</h3>
+            <p id="product-description">No description provided.</p>
+
+            <h3>Seller Information</h3>
+            <p id="product-seller" style="margin-top:6px; font-weight:500; line-height:1.5;"></p>
         </div>
     </div>
-    <!--------Title----------->
-    <div class="small-container">
-        <div class="row row-2">
-            <h2>Related Products</h2>
-            <p>View More</p>
-        </div>
-    </div>
-    <!--------Products----------->
-    <div class="small-container">
-        
-        <div class="row">
-            <div class="col-4">
-                <img src="images/product-1.jpg" alt="Xiaomi Redmi Note 13">
-                <h4>Xiaomi Redmi Note 13</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                </div>
-                <p>₱2000.00</p>
-            </div>
-            <div class="col-4">
-                <img src="images/product-2.jpg" alt="Samsung Galaxy Folder 2">
-                <h4>Samsung Galaxy Folder 2</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                </div>
-                <p>₱750.00</p>
-            </div>
-            <div class="col-4">
-                <img src="images/product-3.jpg" alt="Blackberry Classic">
-                <h4>Blackberry Classic</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                </div>
-                <p>₱800.00</p>
-            </div>
-            <div class="col-4">
-                <img src="images/product-4.jpg" alt="Nokia N95 with Dual Sliding">
-                <h4>Nokia N95 with Dual Sliding</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                </div>
-                <p>₱2800.00</p>
-            </div>
-        </div>
-        
-    </div>
+</div>
 
+<div class="footer">
+    <p class="copyright">Copyright 2025 - RefurbE Mart</p>
+</div>
 
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    if (MenuItems) MenuItems.style.maxHeight = "0px";
 
-
-    <!-------- Footer ----------->
-    <div class="footer">
-            <p class="copyright">Copyright 2025 - RefurbE Mart</p>
-        </div>
-    </div>
-
-    <script>
-        var MenuItems = document.getElementById("MenuItems");
-
-        MenuItems.style.maxHeight = "0px";
-
-        function menutoggle(){
-            if(MenuItems.style.maxHeight == "0px")
-            {
-                MenuItems.style.maxHeight = "200px";
-            }
-            else
-            {
-                MenuItems.style.maxHeight = "0px";
-            }
+    function menutoggle() {
+        if (MenuItems.style.maxHeight === "0px") {
+            MenuItems.style.maxHeight = "200px";
+        } else {
+            MenuItems.style.maxHeight = "0px";
         }
-        // Simple JavaScript for interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Product rating hover effect
-            const ratings = document.querySelectorAll('.rating');
-            ratings.forEach(rating => {
-                rating.addEventListener('mouseover', function() {
-                    this.style.transform = 'scale(1.1)';
-                    this.style.transition = 'transform 0.3s ease';
-                });
-                
-                rating.addEventListener('mouseout', function() {
-                    this.style.transform = 'scale(1)';
-                });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("id");
+
+        // Default products
+        const defaultProducts = [
+            { id: "p1", name: "Xiaomi Redmi Note 13", price: 2000, condition: "Good", image: "images/product-1.jpg", description: "A reliable refurbished smartphone." },
+            { id: "p2", name: "Samsung Galaxy Folder 2", price: 750, condition: "Fair", image: "images/product-2.jpg", description: "Retro folding smartphone in fair condition." },
+            { id: "p3", name: "Blackberry Classic", price: 800, condition: "Good", image: "images/product-3.jpg", description: "Iconic keyboard device for messaging lovers." },
+            { id: "p4", name: "Nokia N95 Dual Sliding", price: 2800, condition: "Excellent", image: "images/product-4.jpg", description: "Collectible multimedia slider with camera controls." },
+            { id: "p-mouse", name: "Refurbished Ball Mouse", price: 500, condition: "Fair", image: "images/gallery-1.jpg", description: "Perfect for retro PC enthusiasts." }
+        ];
+
+        // User-added + Seller-listed products
+        const userProducts = JSON.parse(localStorage.getItem('refurbEProducts')) || [];
+        const sellingProducts = JSON.parse(localStorage.getItem('refurbESellingProducts')) || [];
+
+        // Combine all sources
+        const allProducts = [...defaultProducts, ...userProducts, ...sellingProducts];
+
+        // Find product
+        const product = allProducts.find(p => p.id == productId);
+
+        if (!product) {
+            document.body.innerHTML = "<h2 style='text-align:center'>Product not found.</h2>";
+            return;
+        }
+
+        // ✅ Fill product details
+        document.getElementById("product-name").textContent = product.name;
+        document.getElementById("product-price").textContent = "₱" + Number(product.price).toFixed(2);
+        document.getElementById("product-condition").textContent = product.condition + " Condition";
+        document.getElementById("product-image").src = product.image;
+        document.getElementById("product-description").textContent = product.description || "No description provided.";
+
+        // ⭐ Interactive Star Rating
+        const stars = document.querySelectorAll('#productRating i');
+        const ratingValue = document.getElementById('ratingValue');
+        let currentRating = product.rating || 0;
+
+        function updateStars(rating) {
+            stars.forEach((star, index) => {
+                const starValue = index + 1;
+
+                star.classList.remove('fa-star', 'fa-star-half-o', 'fa-star-o', 'filled');
+                if (rating >= starValue) {
+                    star.classList.add('fa', 'fa-star', 'filled'); // full star gold
+                } else if (rating + 0.5 >= starValue) {
+                    star.classList.add('fa', 'fa-star-half-o', 'filled'); // half star gold
+                } else {
+                    star.classList.add('fa', 'fa-star-o'); // empty star gray
+                }
+            });
+            ratingValue.textContent = rating + "/5";
+        }
+
+        // Initialize
+        updateStars(currentRating);
+
+        // Hover effect with half/full detection
+        stars.forEach((star, index) => {
+            star.addEventListener('mousemove', e => {
+                const rect = star.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const ratingHover = mouseX < rect.width / 2 ? index + 0.5 : index + 1;
+                updateStars(ratingHover);
+            });
+            
+            star.addEventListener('mouseleave', () => updateStars(currentRating));
+
+            star.addEventListener('click', e => {
+                const rect = star.getBoundingClientRect();
+                currentRating = e.clientX - rect.left < rect.width / 2 ? index + 0.5 : index + 1;
+                ratingValue.textContent = currentRating + "/5";
+
+                // Save rating in localStorage
+                let storageKey = sellingProducts.some(p => p.id === product.id) ? "refurbESellingProducts" : "refurbEProducts";
+                let targetArray = storageKey === "refurbESellingProducts" ? sellingProducts : userProducts;
+
+                const idx = targetArray.findIndex(p => p.id === product.id);
+                if (idx !== -1) {
+                    targetArray[idx].rating = currentRating;
+                    localStorage.setItem(storageKey, JSON.stringify(targetArray));
+                }
+
+                updateStars(currentRating);
             });
         });
-    </script>
-    <!--js for product gallery-->
-    <script>
-        var ProductImg = document.getElementById("ProductImg");
-        var SmallImg = document.getElementsByClassName("small-img");
-        SmallImg[0].onclick = function()
-        {
-            ProductImg.src = SmallImg[0].src;
+
+
+        // ✅ Show Seller Info if product came from Seller Listing
+        let sellerInfo = "";
+        if (sellingProducts.some(p => p.id === product.id)) {
+            sellerInfo = `
+                Sold By: <b>${product.sellerName || "Private Seller"}</b><br>
+                Contact: <b>${product.sellerContact || "Not Provided"}</b>
+            `;
+        } else {
+            sellerInfo = `<i>This product is listed by RefurbE Mart.</i>`;
         }
-        SmallImg[1].onclick = function()
-        {
-            ProductImg.src = SmallImg[0].src;
-        }
-        SmallImg[2].onclick = function()
-        {
-            ProductImg.src = SmallImg[0].src;
-        }
-        SmallImg[3].onclick = function()
-        {
-            ProductImg.src = SmallImg[0].src;
-        }
-    </script>
+        document.getElementById("product-seller").innerHTML = sellerInfo;
+
+
+        // ✅ Add to Cart
+        document.getElementById("addToCartBtn").onclick = function() {
+            let cart = JSON.parse(localStorage.getItem("refurbECart")) || [];
+
+            // Include seller details in cart
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                sellerName: product.sellerName || null,
+                sellerContact: product.sellerContact || null
+            });
+
+            localStorage.setItem("refurbECart", JSON.stringify(cart));
+            alert("Added to cart!");
+        };
+
+
+
+    });
+</script>
+
+
 </body>
 </html>

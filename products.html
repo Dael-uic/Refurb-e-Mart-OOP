@@ -8,245 +8,264 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="images/WEB-STICK-LOGO.png" width="75px" alt="RefurbE Mart Logo">
+<body class="products-page">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/WEB-STICK-LOGO.png" width="75px"></a>
+            </div>
+
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-bar">
+                <form action="products.html" method="GET">
+                    <input type="text" placeholder="Search products..." name="q" id="navSearchInput">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+            <a href="cart.html"><img src="images/cart-logo.png" width="30px" height="30px" alt="Cart Logo"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu Icon">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row-2">
+            <h2>All Products</h2>
+            <select>
+                <option value="">Default Sorting</option>
+                <option value="">Sort by Price: Low to High</option>
+                <option value="">Sort by Price: High to Low</option>
+                <option value="">Sort by Popularity</option>
+                <option value="">Sort by Rating</option>
+            </select>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="product-details.html?id=p1"><img src="images/product-1.jpg" alt="Xiaomi Redmi Note 13"></a>
+                <div class="info">
+                    <h4><a href="product-details.html?id=p1">Xiaomi Redmi Note 13</a></h4>
+                    <p>Good Condition</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                    </div>
+                    <div class="price">₱2000.00</div>
+                    <button class="btn btn-add-to-cart" data-id="p1" data-name="Xiaomi Redmi Note 13" data-price="2000.00" data-image="images/product-1.jpg">Add to Cart</button>
                 </div>
-                <div class="search-bar">
-                    <form action="products.html" method="GET">
-                        <input type="text" placeholder="Search products..." name="q">
-                        <button type="submit">Search</button>
-                    </form>
+            </div>
+
+            <div class="product-card">
+                <a href="product-details.html?id=p2"><img src="images/product-2.jpg" alt="Samsung Galaxy Folder 2"></a>
+                <div class="info">
+                    <h4><a href="product-details.html?id=p2">Samsung Galaxy Folder 2</a></h4>
+                    <p>Fair Condition</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                    </div>
+                    <div class="price">₱750.00</div>
+                    <button class="btn btn-add-to-cart" data-id="p2" data-name="Samsung Galaxy Folder 2" data-price="750.00" data-image="images/product-2.jpg">Add to Cart</button>
                 </div>
-                <nav>
-                    <ul id="MenuItems">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="account.html">Account</a></li>
-                    </ul>
-                </nav>
-                <a href="cart.html">
-                    <img src="images/cart-logo.png" width="30px" height="30px" alt="Cart Logo">
-                </a>
-                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu Icon">
             </div>
+
+            <div class="product-card">
+                <a href="product-details.html?id=p3"><img src="images/product-3.jpg" alt="Blackberry Classic"></a>
+                <div class="info">
+                    <h4><a href="product-details.html?id=p3">Blackberry Classic</a></h4>
+                    <p>Good Condition</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
+                    </div>
+                    <div class="price">₱800.00</div>
+                    <button class="btn btn-add-to-cart" data-id="p3" data-name="Blackberry Classic" data-price="800.00" data-image="images/product-3.jpg">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="product-details.html?id=p4"><img src="images/product-4.jpg" alt="Nokia N95"></a>
+                <div class="info">
+                    <h4><a href="product-details.html?id=p4">Nokia N95 Dual Sliding</a></h4>
+                    <p>Excellent Condition</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                    </div>
+                    <div class="price">₱2800.00</div>
+                    <button class="btn btn-add-to-cart" data-id="p4" data-name="Nokia N95 Dual Sliding" data-price="2800.00" data-image="images/product-4.jpg">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="product-details.html?id=p-mouse"><img src="images/gallery-1.jpg" alt="Refurbished Ball Mouse"></a>
+                <div class="info">
+                    <h4><a href="product-details.html?id=p5">Refurbished Ball Mouse</a></h4>
+                    <p>Fair Condition</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                    </div>
+                    <div class="price">₱500.00</div>
+                    <button class="btn btn-add-to-cart" data-id="p-mouse" data-name="Refurbished Ball Mouse" data-price="500.00" data-image="images/gallery-1.jpg">Add to Cart</button>
+                </div>
+            </div>
+
         </div>
 
-
-<!-------- Featured Products----------->
-<div class="small-container">
-    
-    <div class="row row-2">
-        <h2>All Products</h2>
-        <select name="" id="">
-            <option value="">Default Sorting</option>
-            <option value="">Sort by Price</option>
-            <option value="">Sort by Popularity</option>
-            <option value="">Sort by Rating</option>
-            <option value="">Sort by Sale</option>
-        </select>
+        <div class="page-btn">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
     </div>
 
-    <div class="row">
-        <div class="col-4">
-            <img src="images/product-1.jpg" alt="Xiaomi Redmi Note 13">
-            <h4>Xiaomi Redmi Note 13</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-            </div>
-            <p>₱2000.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-2.jpg" alt="Samsung Galaxy Folder 2">
-            <h4>Samsung Galaxy Folder 2</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-            </div>
-            <p>₱750.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-3.jpg" alt="Blackberry Classic">
-            <h4>Blackberry Classic</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-            </div>
-            <p>₱800.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-4.jpg" alt="Nokia N95 with Dual Sliding">
-            <h4>Nokia N95 with Dual Sliding</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-            </div>
-            <p>₱2800.00</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4">
-            <img src="images/product-1.jpg" alt="Xiaomi Redmi Note 13">
-            <h4>Xiaomi Redmi Note 13</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-            </div>
-            <p>₱2000.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-2.jpg" alt="Samsung Galaxy Folder 2">
-            <h4>Samsung Galaxy Folder 2</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-            </div>
-            <p>₱750.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-3.jpg" alt="Blackberry Classic">
-            <h4>Blackberry Classic</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-            </div>
-            <p>₱800.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-4.jpg" alt="Nokia N95 with Dual Sliding">
-            <h4>Nokia N95 with Dual Sliding</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-            </div>
-            <p>₱2800.00</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4">
-            <img src="images/product-1.jpg" alt="Xiaomi Redmi Note 13">
-            <h4>Xiaomi Redmi Note 13</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-            </div>
-            <p>₱2000.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-2.jpg" alt="Samsung Galaxy Folder 2">
-            <h4>Samsung Galaxy Folder 2</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-            </div>
-            <p>₱750.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-3.jpg" alt="Blackberry Classic">
-            <h4>Blackberry Classic</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-            </div>
-            <p>₱800.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-4.jpg" alt="Nokia N95 with Dual Sliding">
-            <h4>Nokia N95 with Dual Sliding</h4>
-            <div class="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-            </div>
-            <p>₱2800.00</p>
-        </div>
-    </div>
-    <div class="page-btn">
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>&#8594;</span>
-    </div>
-</div>
-
-
-<!-------- Footer ----------->
-<div class="footer">
+    <div class="footer">
         <p class="copyright">Copyright 2025 - RefurbE Mart</p>
     </div>
-</div>
 
-<script>
-    var MenuItems = document.getElementById("MenuItems");
+    <!--
+    UPDATED: Kept a single menutoggle() script and removed duplicates.
+    This script controls the mobile menu open/close by toggling maxHeight.
+    -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        if (MenuItems) MenuItems.style.maxHeight = "0px";
 
-    MenuItems.style.maxHeight = "0px";
-
-    function menutoggle(){
-        if(MenuItems.style.maxHeight == "0px")
-        {
-            MenuItems.style.maxHeight = "200px";
+        function menutoggle(){
+            if (!MenuItems) return;
+            if(MenuItems.style.maxHeight === "0px" || MenuItems.style.maxHeight === "") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
         }
-        else
-        {
-            MenuItems.style.maxHeight = "0px";
-        }
-    }
-    // Simple JavaScript for interactive elements
-    document.addEventListener('DOMContentLoaded', function() {
-        // Product rating hover effect
-        const ratings = document.querySelectorAll('.rating');
-        ratings.forEach(rating => {
-            rating.addEventListener('mouseover', function() {
-                this.style.transform = 'scale(1.1)';
-                this.style.transition = 'transform 0.3s ease';
+    </script>
+
+    <!--
+    UPDATED: Load any user-added products from localStorage once on DOMContentLoaded.
+    Removed duplicate insert logic and ensured this runs only once.
+    -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Default products already shown in your HTML:
+            const defaultProducts = [];
+
+            // User-added products from add-product page
+            const userProducts = JSON.parse(localStorage.getItem('refurbEProducts')) || [];
+
+            // Seller-listed products from Selling tab in cart.html
+            const sellingProducts = JSON.parse(localStorage.getItem('refurbESellingProducts')) || [];
+
+            // ✅ Combine everything
+            const allProducts = [...userProducts, ...sellingProducts];
+
+            const productGrid = document.querySelector('.product-grid');
+            if (!productGrid) return;
+
+            allProducts.forEach(product => {
+                const productCardHTML = `
+                    <div class="product-card">
+                        <a href="product-details.html?id=${product.id}">
+                            <img src="${product.image}" alt="${product.name}">
+                        </a>
+                        <div class="info">
+                            <h4><a href="product-details.html?id=${product.id}">${product.name}</a></h4>
+                            <p>${product.condition} Condition</p>
+                            <div class="rating">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="price">₱${Number(product.price).toFixed(2)}</div>
+                            <button class="btn btn-add-to-cart"
+                                    data-id="${product.id}"
+                                    data-name="${product.name}"
+                                    data-price="${product.price}"
+                                    data-image="${product.image}">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                `;
+                productGrid.insertAdjacentHTML('beforeend', productCardHTML);
             });
-            
-            rating.addEventListener('mouseout', function() {
-                this.style.transform = 'scale(1)';
+            // Function to render stars based on saved rating
+            function renderStars(rating, container) {
+                const stars = container.querySelectorAll('i');
+                stars.forEach((star, index) => {
+                    star.classList.remove('fa-star', 'fa-star-half-o', 'fa-star-o', 'filled');
+                    const starValue = index + 1;
+                    if (rating >= starValue) {
+                        star.classList.add('fa', 'fa-star', 'filled');
+                    } else if (rating + 0.5 >= starValue) {
+                        star.classList.add('fa', 'fa-star-half-o', 'filled');
+                    } else {
+                        star.classList.add('fa', 'fa-star-o');
+                    }
+                });
+            }
+
+            // Apply saved ratings to product cards
+            // Apply saved ratings or keep existing stars, just make them gold
+            document.querySelectorAll('.product-card').forEach(card => {
+                const ratingDiv = card.querySelector('.rating');
+                const stars = ratingDiv.querySelectorAll('i');
+
+                stars.forEach(star => {
+                    // If star is full or half, add 'filled' class for gold
+                    if (star.classList.contains('fa-star') || star.classList.contains('fa-star-half-o')) {
+                        star.classList.add('filled');
+                    }
+                });
+
+                // If the product has a saved rating, overwrite stars
+                const id = card.querySelector('.btn-add-to-cart').dataset.id;
+                const allProductsWithRatings = [...userProducts, ...sellingProducts];
+                const product = allProductsWithRatings.find(p => p.id === id);
+                if (product && product.rating !== undefined) {
+                    renderStars(product.rating, ratingDiv);
+                }
             });
         });
+    </script>
+
+
+    <script src="cart.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Attach dynamic links after products are rendered
+        document.querySelectorAll(".product-card .btn-add-to-cart").forEach(button => {
+            const productId = button.dataset.id;
+            const card = button.closest(".product-card");
+            const link = card.querySelector("a");
+            if (link) {
+                link.href = `product-details.html?id=${productId}`;
+            }
+        });
     });
-</script>
+    </script>
+
+    <script>
+        document.getElementById("searchInput").addEventListener("input", function() {
+            const searchValue = this.value.toLowerCase();
+            document.querySelectorAll(".product-card").forEach(card => {
+                const name = card.querySelector("h4").textContent.toLowerCase();
+                card.style.display = name.includes(searchValue) ? "" : "none";
+            });
+        });
+    </script>
+
+
 </body>
 </html>

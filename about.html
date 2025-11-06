@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - RefurbE Mart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/WEB-STICK-LOGO.png" width="75px" alt="RefurbE Mart Logo">
+                </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html">
+                <img src="images/cart-logo.png" width="30px" height="30px" alt="Cart Logo">
+            </a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu Icon">
+        </div>
+    </div>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="page-title">About Us</h1>
+            <p class="page-subtitle">Giving Technology a Second Life</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="about-section-card">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/about-us-image.jpg" alt="Our Workshop" class="about-image">
+                </div>
+                <div class="col-2 about-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2025, RefurbE Mart started as a small workshop dedicated to breathing new life into forgotten gadgets. We saw a world of waste and an opportunity for change.</p>
+                    <p>Today, we are a premier online marketplace for certified refurbished electronics. Each device is meticulously tested, repaired, and restored by our expert technicians, ensuring you get a product that looks and feels new, for a fraction of the price.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>To make technology accessible and sustainable. We are passionate about reducing e-waste, providing top-tier products you can trust, and building a better, more circular economy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="title">Our Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fa fa-shield"></i>
+                </div>
+                <h4>Quality & Trust</h4>
+                <p>Every device undergoes a 30-point inspection to ensure it meets our high standards. All products come with a 1-year warranty.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fa fa-recycle"></i>
+                </div>
+                <h4>Sustainability</h4>
+                <p>We believe in a circular economy. By choosing refurbished, you're helping us reduce e-waste and protect the planet.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fa fa-users"></i>
+                </div>
+                <h4>Customer Focus</h4>
+                <p>Your satisfaction is our priority. Our dedicated support team is always here to help you with any questions or concerns.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="title">Meet The Team</h2>
+        <div class="team-grid">
+            <div class="team-member-card">
+                <img src="images/user-1.jpg" alt="Team Member 1">
+                <h4>Henry Philip Dael</h4>
+                <p>Backend & Ass. Frontend</p>
+            </div>
+            <div class="team-member-card">
+                <img src="images/user-2.jpg" alt="Team Member 2">
+                <h4>Ellein Ugay</h4>
+                <p>Frontend, Ass. Backend &, Ass. Documentator</p>
+            </div>
+            <div class="team-member-card">
+                <img src="images/user-3.jpg" alt="Team Member 3">
+                <h4>Khristine May Narita</h4>
+                <p>Project Manager & Documentator</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p class="copyright">Copyright 2025 - RefurbE Mart</p>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+</html>
